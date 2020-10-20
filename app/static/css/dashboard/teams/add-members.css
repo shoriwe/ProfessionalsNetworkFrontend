@@ -1,0 +1,214 @@
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: #2c3e50;
+    font-family: Arial;
+    padding: 1vw;
+}
+
+.sub-title {
+    font-family: Arial;
+    font-size: 2vw;
+    text-align: center;
+    padding: 1vw;
+}
+
+.interaction-container {
+    display: flex;
+}
+
+.checked {
+    height: 1vw;
+    width: auto;
+    background: #3498db;
+    border-width: 1px;
+}
+
+.view-professional-button {
+    background: #2ecc71;
+    color: white;
+    border-width: 0;
+    padding: 0vw 1vw;
+    text-decoration: none;
+}
+.not-checked {
+    height: 1vw;
+    width: auto;
+    background: #ecf0f1;
+    border-width: 1px;
+}
+.results-table {
+    font-size: 1.5vw;
+    width: 100%;
+    font-family: Arial;
+    text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.results-container {
+    padding: 2vw;
+    box-shadow: 1px 5px 10px #888888;
+    margin: 0vw 2vw;
+    width: 55%;
+}
+
+.filter-container {
+    height: 70vw;
+    box-shadow: 1px 5px 10px #888888;
+    width: 40%;
+}
+.add-new-members-button {
+    border-width: 0;
+    background: #2ecc71;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+.filter-parameter-container {
+
+}
+
+.description-field {
+    margin: 1vw 0vw 1vw 2vw;
+    resize: none;
+    width: 32vw;
+    height: 8vw;
+}
+
+.skills-selection {
+    width: 80%;
+    font-size: 1.5vw;
+    margin: 1vw 0vw 0vw 2vw;
+}
+
+
+.language-selection {
+    width: 80%;
+    font-size: 1.5vw;
+    margin: 1vw 0vw 0vw 2vw;
+}
+
+.search-button {
+    padding: 0.1vw 2vw;
+    width: 32.5vw;
+    font-family: Arial;
+    border-width: 0;
+    background: #20bf6b;
+    font-size: 2.5vw;
+    color: white;
+    margin: 2vw 0vw 2vw 2vw;
+}
+
+.liked-skills-checkbox {
+    display: inline-block;
+    color: #45aaf2;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0.7vw 0.2vw;
+    outline: 0;
+    align: right;
+}
+
+.available-checkbox {
+    display: inline-block;
+    color: #45aaf2;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0.7vw 0vw 0vw 6vw;
+    outline: 0;
+    align: right;
+}
+
+.remote-checkbox {
+    display: inline-block;
+    color: #45aaf2;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0.7vw 0vw 0vw 7vw;
+    outline: 0;
+    align: right;
+}
+
+
+.location-selection-field {
+    width: 80%;
+    font-size: 1.5vw;
+    margin: 1vw 0vw 0vw 2vw;
+}
+
+.gender-selection-field {
+    margin: 0.5vw 0vw 0.8vw 7vw;
+    font-family: Arial;
+    font-size: 2vw;
+    width: 30%;
+    outline: 0;
+    box-shadow: none;
+    border: 1 !important;
+    color: #4b4b4b;
+}
+
+.nationality-selection-field {
+    width: 80%;
+    font-size: 1.5vw;
+    margin: 1vw 0vw 0vw 2vw;
+}
+
+.skills-button{
+    width: 10vw;
+    padding: 0.1vw 1vw;
+    margin: 0vw 0vw 0vw 2vw;
+    font-size: 2.5vw;
+    font-family: Arial;
+    background: #4b7bec;
+    color: white;
+    border-width: 0;
+}
+
+.label-text {
+    font-family: Arial;
+    font-size: 2vw;
+    margin: 1vw 2vw 1vw 2vw;
+}
+
+.languages-button{
+    width: 20vw;
+    margin: 0vw 0vw 0vw 2.5vw;
+    padding: 0.1vw 1vw;
+    background: #a55eea;
+    color: white;
+    font-size: 2.5vw;
+    border-width: 0;
+}
+
+.button-container {
+    text-align: center;
+    margin: 2vw;
+}
+
+.back-button {
+    border-width: 0;
+    padding: 1vw;
+    color: white;
+    background: #3498db;
+    font-size: 1.5vw;
+}
+
+.next-button {
+    border-width: 0;
+    padding: 1vw;
+    color: white;
+    background: #2ecc71;
+    font-size: 1.5vw;
+}

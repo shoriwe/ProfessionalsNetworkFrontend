@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/dashboard/professional/languages/languages.css') }}"
+          rel="stylesheet"
+          type="text/css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="master-container">
+    <div class="title-container">
+        <h1 class="title">My languages</h1>
+        <form action="/dashboard/profile/languages/add">
+            <button class="add-new-languages-button">Add</button>
+        </form>
+        <button class="delete-languages-button" onclick="delete_languages()">Delete</button>
+    </div>
+</div>
+<div class="languages-container" id="languages-container">
+</div>
+<script src="{{ url_for('static',filename='js/dashboard/professional/languages/professional-languages.js') }}"></script>
+
+</body>
+</html>

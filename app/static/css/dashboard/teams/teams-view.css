@@ -1,0 +1,125 @@
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: #2c3e50;
+    font-family: Arial;
+    padding: 1vw;
+}
+
+.apply-to-team {
+    border-width: 0;
+    background: #2ecc71;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0.6vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+.leave-team {
+    border-width: 0;
+    background: #ff3f34;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0.6vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+.team-information-container {
+    display: flex;
+}
+.team-members {
+    margin: 0vw 3vw;
+    padding: 2vw 6vw;
+    box-shadow: 1px 5px 10px #888888;
+}
+
+.members-title {
+    font-family: Arial;
+    font-size: 3vw;
+}
+
+.team-graph {
+    background: blue;
+    width:60vw;
+    height: auto;
+}
+
+.members {
+    position:relative;
+    height: 30vw;
+    overflow: scroll;
+}
+
+.team-member {
+    margin: 1vw 0vw;
+    box-shadow: 1px 5px 10px #888888;
+    border-width: 0;
+    font-size: 2vw;
+    background: #3498db;
+    padding: 1vw;
+    color: white;
+}
+
+.view-team {
+    font-size: 2vw;
+    padding: 1.8vw 1vw;
+    border-width: 0;
+    color: white;
+    background: #32ff7e;
+    text-decoration: none;
+}
+
+.deletion-team-box {
+    background: #ff5e57;
+    color: white;
+    border-width: 0;
+    font-family: Arial;
+    padding: 1.5vw;
+    font-size: 2.5vw;
+}
+
+.team-box{
+    background: #3498db;
+    color: white;
+    border-width: 0;
+    font-family: Arial;
+    padding: 1.5vw;
+    font-size: 2.5vw;
+}
+
+.add-members-buttons {
+    border-width: 0;
+    background: #2ecc71;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+.delete-members-button {
+    border-width: 0;
+    background: #ff3f34;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0.6vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+.button-container {
+    // justify-content: flex-start | flex-end | center | space-between | space-around;
+    display: flex;
+    align-items:center;
+    margin: 1vw;
+}

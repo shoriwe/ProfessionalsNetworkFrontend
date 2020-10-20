@@ -1,0 +1,40 @@
+.top-bar-container {
+    background: #ffffff;
+    display: flex;
+}
+
+.dashboard-page-link {
+    text-decoration: none;
+    font-family: Franklin Gothic Medium;
+    margin: 1.5vw 2vw 0.5vw 2vw;
+    font-size: 3.8vw;
+    flex: left;
+    color: #4b4b4b;
+}
+
+.profile-page-link {
+    text-decoration: none;
+    font-family: Arial;
+    margin: 3vw 2vw 0.5vw 4vw;
+    font-size: 2vw;
+    flex: left;
+    color: #1e90ff;
+}
+
+.teams-page-link {
+    text-decoration: none;
+    font-family: Arial;
+    margin: 3vw 2vw 0.5vw 2vw;
+    font-size: 2vw;
+    flex: left;
+    color: #1e90ff;
+}
+
+.account-page-link {
+    text-decoration: none;
+    font-family: Arial;
+    margin: 3vw 2vw 0.5vw 2vw;
+    font-size: 2vw;
+    flex: left;
+    color: #1e90ff;
+}

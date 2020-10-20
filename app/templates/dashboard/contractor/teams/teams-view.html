@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{{ url_for('static',filename='css/dashboard/teams/teams-view.css') }}"
+          rel="stylesheet"
+          type="text/css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="master-container">
+    <div class="title-container">
+        <h1 class="title" id="team-name">TEAM NAME HERE</h1>
+        <button class="leave-team" onclick="dissolve_team(id)">Dissolve</button>
+    </div>
+</div>
+<div class="team-information-container">
+    <div class="team-members">
+        <h2 class="members-title">Members</h2>
+        <div class="members" id="team-members">
+
+        </div>
+        <button class="add-members-buttons" onclick="add_members()">Add</button>
+        <button class="delete-members-button" onclick="remove_members()">Delete</button>
+    </div>
+    <div class="team-graph">
+
+    </div>
+</div>
+<script src="{{ url_for('static',filename='js/dashboard/teams/teams-view.js') }}"></script>
+<script>load_members_contractor()</script>
+</body>
+</html>

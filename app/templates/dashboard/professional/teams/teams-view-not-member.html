@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{{ url_for('static',filename='css/dashboard/teams/teams-view.css') }}"
+          rel="stylesheet"
+          type="text/css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="master-container">
+    <div class="title-container">
+        <h1 class="title" id="team-name">{{ team_name }}</h1>
+        <button class="apply-to-team" onclick="apply_to_team()">Apply</button>
+    </div>
+</div>
+<div class="team-information-container">
+    <div class="team-members">
+        <h2 class="members-title">Members</h2>
+        <div class="members" id="team-members">
+
+        </div>
+    </div>
+    <div class="team-graph">
+
+    </div>
+</div>
+<script src="{{ url_for('static',filename='js/dashboard/teams/teams-view.js') }}"></script>
+</body>
+</html>

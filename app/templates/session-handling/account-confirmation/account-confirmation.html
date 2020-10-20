@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='css/session-handling/account-confirmation/account-confirmation.css')  }}"
+          rel="stylesheet">
+    <title>Confirm account</title>
+</head>
+<body>
+<div class="confirmation-form-container">
+    <div>
+        <h1 class="title">Confirm account</h1>
+        <p class="confirmation-failed-message" id="confirmation-failed-message-id">
+            Confirmation failed
+        </p>
+    </div>
+    <form id="confirmation-form" method="POST" onsubmit="return handle_confirmation(event)">
+        <input class="phone-number-input" id="sms-key" placeholder="SMS code" required type="text">
+        <button class="confirmation-button" type="submit">Confirm</button>
+    </form>
+</div>
+<script src="{{  url_for('static', filename='js/session-handling/account-confirmation-checks.js')  }}"></script>
+</body>
+</html>

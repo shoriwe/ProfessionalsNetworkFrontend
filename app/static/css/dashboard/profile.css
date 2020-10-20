@@ -1,0 +1,162 @@
+.top-bar-separator {
+    background: #82589F;
+    border-width: 0;
+    text-align: center;
+    color: white;
+    box-shadow: 1px 5px 10px #888888;
+    padding: 1vw;
+    font-family: Arial
+}
+
+.title {
+    font-family: Franklin Gothic Medium;
+    text-align: center;
+    font-size: 2.3vw;
+}
+
+.label-text {
+    font-family: Arial;
+    font-size: 2vw;
+    margin: 1vw 2vw 1vw 2vw;
+}
+
+.box-container{
+    display: flex;
+    vertical-align:top;
+    align: left;
+}
+
+.network-container {
+    margin: 0vw 2vw;
+    width: 100%;
+    text-align: center;
+    background: blue;
+}
+
+.profile-working-fields {
+    margin: 0vw 2vw;
+    box-shadow: 1px 5px 10px #888888;
+    padding: 1vw;
+    width: 70vw;
+}
+
+.description-field {
+    margin: 1vw 0vw 1vw 2vw;
+    resize: none;
+    width: 32vw;
+    height: 8vw;
+}
+
+.update-description-button {
+    padding: 0.1vw 2vw;
+    width: 32.5vw;
+    font-family: Arial;
+    border-width: 0;
+    background: #20bf6b;
+    font-size: 2.5vw;
+    color: white;
+    margin: 0vw 0vw 2vw 2vw;
+}
+
+.liked-skills-checkbox {
+    display: inline-block;
+    color: #45aaf2;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0.7vw 0.2vw;
+    outline: 0;
+    align: right;
+}
+
+.available-checkbox {
+    display: inline-block;
+    color: #45aaf2;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0.7vw 0vw 0vw 6vw;
+    outline: 0;
+    align: right;
+}
+
+.remote-checkbox {
+    display: inline-block;
+    color: #45aaf2;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0.7vw 0vw 0vw 7vw;
+    outline: 0;
+    align: right;
+}
+
+.location-selection-field {
+    margin: 0.5vw 0vw 0.8vw 6vw;
+    font-family: Arial;
+    font-size: 2vw;
+    outline: 0;
+    width: 30%;
+    box-shadow: none;
+    border: 1 !important;
+    color: #4b4b4b;
+}
+
+.gender-selection-field {
+    margin: 0.5vw 0vw 0.8vw 7vw;
+    font-family: Arial;
+    font-size: 2vw;
+    width: 30%;
+    outline: 0;
+    box-shadow: none;
+    border: 1 !important;
+    color: #4b4b4b;
+}
+
+.nationality-selection-field {
+    margin: 0.5vw 0vw 0.8vw 4.4vw;
+    font-family: Arial;
+    font-size: 2vw;
+    width: 30%;
+    outline: 0;
+    box-shadow: none;
+    border: 1 !important;
+    color: #4b4b4b;
+}
+
+.skills-button{
+    width: 10vw;
+    padding: 0.1vw 1vw;
+    margin: 0vw 0vw 0vw 2vw;
+    font-size: 2.5vw;
+    font-family: Arial;
+    background: #4b7bec;
+    color: white;
+    border-width: 0;
+}
+
+.languages-button{
+    width: 20vw;
+    margin: 0vw 0vw 0vw 2.5vw;
+    padding: 0.1vw 1vw;
+    background: #a55eea;
+    color: white;
+    font-size: 2.5vw;
+    border-width: 0;
+}
+
+.buttons-container {
+    display: inline-block;
+    align: left;
+}
+
+.update-message {
+    font-family: Arial;
+    font-size: 2vw;
+    text-align: center;
+    background: #4cd137;
+    color: white;
+    padding: 1vw;
+    display: none;
+}
+
+.skills-languages-container {
+    display: flex;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static',filename='css/dashboard/account.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="title-container">
+    <h1 class="title">My Account</h1>
+</div>
+<div class="controller-container">
+    <div class="account-information-container">
+        <h2 class="sub-title">Email/Phone number</h2>
+        <form action="/dashboard/account/email/phone/number">
+            <button class="change-email-phone-number-button">Change Email/Phone number</button>
+        </form>
+        <h2 class="sub-title">Password</h2>
+        <h2 class="password-update-fail-message" id="password-update-fail-message-id">test message</h2>
+        <form action="/dashboard/account" onsubmit="return update_password(event)">
+            <input class="password-field" id="old-password" placeholder="Old password" required type="password">
+            <br>
+            <input class="password-field" id="new-password" placeholder="New Password" required type="password">
+            <br>
+            <input class="password-field" id="new-password-confirmation" placeholder="Password Confirmation"
+                   required type="password">
+            <br>
+            <button class="update-password-button" type="submit">Update password</button>
+        </form>
+    </div>
+</div>
+<script src="{{ url_for('static',filename='js/dashboard/account.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.confirmation-form-container {
+    padding: 1vw 5vw 5vw 5vw;
+    width: 50vw;
+    margin: 5vw 10vw 5vw 20vw;
+    box-shadow: 5px 5px 10px #888888;
+    border-radius: 1vw;
+}
+
+.title {
+    color: #3867d6;
+    font-size: 5vw;
+    font-family: Franklin Gothic Medium;
+    text-align: center;
+}
+
+.confirmation-failed-message {
+    padding: 1vw;
+    display: none;
+    background: #ff3f34;
+    color: white;
+    font-family: Arial Black;
+    text-align: center;
+
+}
+
+.phone-number-input {
+    text-align: left;
+    color: #3d3d3d;
+    box-shadow: 1px 5px 10px #888888;
+    margin: 0vw 0vw 0vw 8vw;
+    border-width: 0;
+    padding: 0.2vw;
+    font-size: 2vw;
+    font-family: Arial;
+}
+
+.phone-number-input::placeholder {
+    color: #4b4b4b;
+}
+.confirmation-button {
+    padding: 0.2vw 0.5vw 0.2vw 0.5vw;
+    color: white;
+    font-family: Arial;
+    background: #20bf6b;
+    border-width: 0;
+    font-size: 2vw;
+}

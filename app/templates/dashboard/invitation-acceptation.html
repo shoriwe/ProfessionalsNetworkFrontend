@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='css/dashboard/team-invitation.css')  }}"
+          rel="stylesheet">
+    <title>Confirm account</title>
+</head>
+<body>
+<div class="confirmation-form-container">
+    <div>
+        <h1 class="title">{{ title }}</h1>
+        <p class="confirmation-failed-message" id="confirmation-failed-message-id">
+            Confirmation failed
+        </p>
+    </div>
+    <div class="button-container">
+        <button class="accept-invitation" onclick="accept_invitation(id)">Accept</button>
+        <button class="decline-invitation" onclick="decline_invitation(id)">Decline</button>
+    </div>
+</div>
+<script src="{{  url_for('static', filename='js/dashboard/team-invitation.js')  }}"></script>
+</body>
+</html>

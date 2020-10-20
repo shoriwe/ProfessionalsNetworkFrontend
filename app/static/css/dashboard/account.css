@@ -1,0 +1,69 @@
+.title {
+    background: #82589F;
+    font-family: Franklin Gothic Medium;
+    text-align: center;
+    box-shadow: 1px 5px 10px #888888;
+    padding: 1vw;
+    color: white;
+}
+
+.change-email-phone-number-button {
+    background: #2ecc71;
+    color: white;
+    border-width: 0;
+    font-size: 1.5vw;
+    padding: 0.5vw;
+    margin: 0vw 2vw;
+}
+
+.account-information-container {
+    box-shadow: 1px 5px 10px #888888;
+    padding: 0.5vw 3vw;
+}
+
+.sub-title {
+    font-size: 2vw;
+    font-family: Arial;
+}
+
+.password-update-fail-message {
+    font-family: Arial;
+    font-size: 1.7vw;
+    color: white;
+    background: #e74c3c;
+    text-align: center;
+    padding: 0.5vw;
+    display: none;
+}
+
+.password-update-success-message {
+    font-family: Arial;
+    font-size: 1.7vw;
+    color: white;
+    background: #2ecc71;
+    text-align: center;
+    padding: 0.5vw;
+    display: none;
+}
+
+.password-field {
+    font-size: 1.5vw;
+    box-shadow: 1px 1px 10px #888888;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+    margin: 0vw 2vw 0.5vw 2vw;
+    padding: 0.5vw;
+    width: 21vw;
+}
+
+.update-password-button {
+    box-shadow: 1px 5px 10px #888888;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+    background: #2ecc71;
+    color: white;
+    font-family: Arial;
+    font-size: 1.5vw;
+    margin: 1.5vw 2vw 2vw 2vw;
+    padding: 0.5vw;
+}

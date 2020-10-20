@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/dashboard/professional/skills/skills.css') }}" rel="stylesheet"
+          type="text/css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="master-container">
+    <div class="title-container">
+        <h1 class="title">My skills</h1>
+        <form action="/dashboard/profile/skills/add">
+            <button class="add-new-skills-button">Add</button>
+        </form>
+        <button class="delete-skills-button" onclick="delete_skills()">Delete</button>
+    </div>
+</div>
+<div class="skills-container" id="skills-container">
+</div>
+<script src="{{ url_for('static',filename='js/dashboard/professional/skills/skills.js') }}"></script>
+
+</body>
+</html>

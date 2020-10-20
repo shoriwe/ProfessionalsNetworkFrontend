@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static',filename='css/dashboard/teams/add-members.css') }}"
+          rel="stylesheet"
+          type="text/css">
+</head>
+<body>
+<div class="master-container">
+    <div class="title-container">
+        <h1 class="title">Member invitation</h1>
+        <br>
+        <div class="options-container">
+            <button class="add-new-members-button" onclick="add_members()">Add</button>
+        </div>
+    </div>
+</div>
+<div class="interaction-container" id="teams-container">
+    <div class="filter-container">
+        <h2 class="sub-title">Filters</h2>
+        <h1 class="update-message" id="update-message"></h1>
+        <div class="filter-parameter-container">
+            <label class="label-text">Liked skills only:</label><input class="liked-skills-checkbox"
+                                                                       id="liked-skills-only"
+                                                                       type="checkbox"><br>
+            <label class="label-text">Available:</label><input class="available-checkbox" id="available"
+                                                               type="checkbox"><br>
+            <label class="label-text">Remote:</label><input class="remote-checkbox" id="remote" type="checkbox">
+            <br>
+            <label class="label-text" for="gender">Gender:</label>
+            <select class="gender-selection-field" id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <label class="label-text" for="location">Locations: (Use CTRL for multiple)</label>
+            <br>
+            <select class="location-selection-field" id="location" multiple>
+                <option>Afghanistan</option>
+                <option>Albania</option>
+                <option>Algeria</option>
+                <option>Andorra</option>
+                <option>Angola</option>
+                <option>Antigua & Deps</option>
+                <option>Argentina</option>
+                <option>Armenia</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Bahamas</option>
+                <option>Bahrain</option>
+                <option>Bangladesh</option>
+                <option>Barbados</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Belize</option>
+                <option>Benin</option>
+                <option>Bhutan</option>
+                <option>Bolivia</option>
+                <option>Bosnia Herzegovina</option>
+                <option>Botswana</option>
+                <option>Brazil</option>
+                <option>Brunei</option>
+                <option>Bulgaria</option>
+                <option>Burkina</option>
+                <option>Burundi</option>
+                <option>Cambodia</option>
+                <option>Cameroon</option>
+                <option>Canada</option>
+                <option>Cape Verde</option>
+                <option>Central African Rep</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Colombia</option>
+                <option>Comoros</option>
+                <option>Congo</option>
+                <option>Congo {Democratic Rep}</option>
+                <option>Costa Rica</option>
+                <option>Croatia</option>
+                <option>Cuba</option>
+                <option>Cyprus</option>
+                <option>Czech Republic</option>
+                <option>Denmark</option>
+                <option>Djibouti</option>
+                <option>Dominica</option>
+                <option>Dominican Republic</option>
+                <option>East Timor</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>El Salvador</option>
+                <option>Equatorial Guinea</option>
+                <option>Eritrea</option>
+                <option>Estonia</option>
+                <option>Ethiopia</option>
+                <option>Fiji</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>Gabon</option>
+                <option>Gambia</option>
+                <option>Georgia</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Greece</option>
+                <option>Grenada</option>
+                <option>Guatemala</option>
+                <option>Guinea</option>
+                <option>Guinea-Bissau</option>
+                <option>Guyana</option>
+                <option>Haiti</option>
+                <option>Honduras</option>
+                <option>Hungary</option>
+                <option>Iceland</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Ireland {Republic}</option>
+                <option>Israel</option>
+                <option>Italy</option>
+                <option>Ivory Coast</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Kiribati</option>
+                <option>Korea North</option>
+                <option>Korea South</option>
+                <option>Kosovo</option>
+                <option>Kuwait</option>
+                <option>Kyrgyzstan</option>
+                <option>Laos</option>
+                <option>Latvia</option>
+                <option>Lebanon</option>
+                <option>Lesotho</option>
+                <option>Liberia</option>
+                <option>Libya</option>
+                <option>Liechtenstein</option>
+                <option>Lithuania</option>
+                <option>Luxembourg</option>
+                <option>Macedonia</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Maldives</option>
+                <option>Mali</option>
+                <option>Malta</option>
+                <option>Marshall Islands</option>
+                <option>Mauritania</option>
+                <option>Mauritius</option>
+                <option>Mexico</option>
+                <option>Micronesia</option>
+                <option>Moldova</option>
+                <option>Monaco</option>
+                <option>Mongolia</option>
+                <option>Montenegro</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar, {Burma}</option>
+                <option>Namibia</option>
+                <option>Nauru</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>New Zealand</option>
+                <option>Nicaragua</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>Norway</option>
+                <option>Oman</option>
+                <option>Pakistan</option>
+                <option>Palau</option>
+                <option>Panama</option>
+                <option>Papua New Guinea</option>
+                <option>Paraguay</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Qatar</option>
+                <option>Romania</option>
+                <option>Russian Federation</option>
+                <option>Rwanda</option>
+                <option>St Kitts & Nevis</option>
+                <option>St Lucia</option>
+                <option>Saint Vincent & the Grenadines</option>
+                <option>Samoa</option>
+                <option>San Marino</option>
+                <option>Sao Tome & Principe</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Serbia</option>
+                <option>Seychelles</option>
+                <option>Sierra Leone</option>
+                <option>Singapore</option>
+                <option>Slovakia</option>
+                <option>Slovenia</option>
+                <option>Solomon Islands</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Sudan</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Suriname</option>
+                <option>Swaziland</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Syria</option>
+                <option>Taiwan</option>
+                <option>Tajikistan</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Togo</option>
+                <option>Tonga</option>
+                <option>Trinidad & Tobago</option>
+                <option>Tunisia</option>
+                <option>Turkey</option>
+                <option>Turkmenistan</option>
+                <option>Tuvalu</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Arab Emirates</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>Uruguay</option>
+                <option>Uzbekistan</option>
+                <option>Vanuatu</option>
+                <option>Vatican City</option>
+                <option>Venezuela</option>
+                <option>Vietnam</option>
+                <option>Yemen</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+            </select>
+            <br>
+            <label class="label-text" for="nationality">Nationalities: (Use CTRL for multiple)</label>
+            <br>
+            <select class="nationality-selection-field" id="nationality" multiple>
+                <option>Afghan</option>
+                <option>Albanian</option>
+                <option>Algerian</option>
+                <option>American</option>
+                <option>Andorran</option>
+                <option>Angolan</option>
+                <option>Antiguans</option>
+                <option>Argentinean</option>
+                <option>Armenian</option>
+                <option>Australian</option>
+                <option>Austrian</option>
+                <option>Azerbaijani</option>
+                <option>Bahamian</option>
+                <option>Bahraini</option>
+                <option>Bangladeshi</option>
+                <option>Barbadian</option>
+                <option>Barbudans</option>
+                <option>Batswana</option>
+                <option>Belarusian</option>
+                <option>Belgian</option>
+                <option>Belizean</option>
+                <option>Beninese</option>
+                <option>Bhutanese</option>
+                <option>Bolivian</option>
+                <option>Bosnian</option>
+                <option>Brazilian</option>
+                <option>British</option>
+                <option>Bruneian</option>
+                <option>Bulgarian</option>
+                <option>Burkinabe</option>
+                <option>Burmese</option>
+                <option>Burundian</option>
+                <option>Cambodian</option>
+                <option>Cameroonian</option>
+                <option>Canadian</option>
+                <option>Cape Verdean</option>
+                <option>Central African</option>
+                <option>Chadian</option>
+                <option>Chilean</option>
+                <option>Chinese</option>
+                <option>Colombian</option>
+                <option>Comoran</option>
+                <option>Congolese</option>
+                <option>Costa Rican</option>
+                <option>Croatian</option>
+                <option>Cuban</option>
+                <option>Cypriot</option>
+                <option>Czech</option>
+                <option>Danish</option>
+                <option>Djibouti</option>
+                <option>Dominican</option>
+                <option>Dutch</option>
+                <option>East Timorese</option>
+                <option>Ecuadorean</option>
+                <option>Egyptian</option>
+                <option>Emirian</option>
+                <option>Equatorial Guinean</option>
+                <option>Eritrean</option>
+                <option>Estonian</option>
+                <option>Ethiopian</option>
+                <option>Fijian</option>
+                <option>Filipino</option>
+                <option>Finnish</option>
+                <option>French</option>
+                <option>Gabonese</option>
+                <option>Gambian</option>
+                <option>Georgian</option>
+                <option>German</option>
+                <option>Ghanaian</option>
+                <option>Greek</option>
+                <option>Grenadian</option>
+                <option>Guatemalan</option>
+                <option>Guinea-Bissauan</option>
+                <option>Guinean</option>
+                <option>Guyanese</option>
+                <option>Haitian</option>
+                <option>Herzegovinian</option>
+                <option>Honduran</option>
+                <option>Hungarian</option>
+                <option>I-Kiribati</option>
+                <option>Icelander</option>
+                <option>Indian</option>
+                <option>Indonesian</option>
+                <option>Iranian</option>
+                <option>Iraqi</option>
+                <option>Irish</option>
+                <option>Israeli</option>
+                <option>Italian</option>
+                <option>Ivorian</option>
+                <option>Jamaican</option>
+                <option>Japanese</option>
+                <option>Jordanian</option>
+                <option>Kazakhstani</option>
+                <option>Kenyan</option>
+                <option>Kittian and Nevisian</option>
+                <option>Kuwaiti</option>
+                <option>Kyrgyz</option>
+                <option>Laotian</option>
+                <option>Latvian</option>
+                <option>Lebanese</option>
+                <option>Liberian</option>
+                <option>Libyan</option>
+                <option>Liechtensteiner</option>
+                <option>Lithuanian</option>
+                <option>Luxembourger</option>
+                <option>Macedonian</option>
+                <option>Malagasy</option>
+                <option>Malawian</option>
+                <option>Malaysian</option>
+                <option>Maldivian</option>
+                <option>Malian</option>
+                <option>Maltese</option>
+                <option>Marshallese</option>
+                <option>Mauritanian</option>
+                <option>Mauritian</option>
+                <option>Mexican</option>
+                <option>Micronesian</option>
+                <option>Moldovan</option>
+                <option>Monacan</option>
+                <option>Mongolian</option>
+                <option>Moroccan</option>
+                <option>Mosotho</option>
+                <option>Motswana</option>
+                <option>Mozambican</option>
+                <option>Namibian</option>
+                <option>Nauruan</option>
+                <option>Nepalese</option>
+                <option>New Zealander</option>
+                <option>Ni-Vanuatu</option>
+                <option>Nicaraguan</option>
+                <option>Nigerian</option>
+                <option>Nigerien</option>
+                <option>North Korean</option>
+                <option>Northern Irish</option>
+                <option>Norwegian</option>
+                <option>Omani</option>
+                <option>Pakistani</option>
+                <option>Palauan</option>
+                <option>Panamanian</option>
+                <option>Papua New Guinean</option>
+                <option>Paraguayan</option>
+                <option>Peruvian</option>
+                <option>Polish</option>
+                <option>Portuguese</option>
+                <option>Qatari</option>
+                <option>Romanian</option>
+                <option>Russian</option>
+                <option>Rwandan</option>
+                <option>Saint Lucian</option>
+                <option>Salvadoran</option>
+                <option>Samoan</option>
+                <option>San Marinese</option>
+                <option>Sao Tomean</option>
+                <option>Saudi</option>
+                <option>Scottish</option>
+                <option>Senegalese</option>
+                <option>Serbian</option>
+                <option>Seychellois</option>
+                <option>Sierra Leonean</option>
+                <option>Singaporean</option>
+                <option>Slovakian</option>
+                <option>Slovenian</option>
+                <option>Solomon Islander</option>
+                <option>Somali</option>
+                <option>South African</option>
+                <option>South Korean</option>
+                <option>Spanish</option>
+                <option>Sri Lankan</option>
+                <option>Sudanese</option>
+                <option>Surinamer</option>
+                <option>Swazi</option>
+                <option>Swedish</option>
+                <option>Swiss</option>
+                <option>Syrian</option>
+                <option>Taiwanese</option>
+                <option>Tajik</option>
+                <option>Tanzanian</option>
+                <option>Thai</option>
+                <option>Togolese</option>
+                <option>Tongan</option>
+                <option>Trinidadian or Tobagonian</option>
+                <option>Tunisian</option>
+                <option>Turkish</option>
+                <option>Tuvaluan</option>
+                <option>Ugandan</option>
+                <option>Ukrainian</option>
+                <option>Uruguayan</option>
+                <option>Uzbekistani</option>
+                <option>Venezuelan</option>
+                <option>Vietnamese</option>
+                <option>Welsh</option>
+                <option>Yemenite</option>
+                <option>Zambian</option>
+                <option>Zimbabwean</option>
+            </select>
+            <br>
+            <label class="label-text">Languages: (Use CTRL for multiple)</label>
+            <select class="language-selection" id="languages" multiple>
+                <option>Afar</option>
+                <option>Akan</option>
+                <option>Albanian</option>
+                <option>Algonquian</option>
+                <option>Aragonese</option>
+                <option>Armenian</option>
+                <option>Assamese</option>
+                <option>Austroasiatic</option>
+                <option>Austronesian</option>
+                <option>Avaric</option>
+                <option>Aymara</option>
+                <option>Aymaran</option>
+                <option>Azerbaijani</option>
+                <option>Bambara</option>
+                <option>Bashkir</option>
+                <option>Basque</option>
+                <option>Belarusian</option>
+                <option>Bengali</option>
+                <option>Bosnian</option>
+                <option>Breton</option>
+                <option>Bulgarian</option>
+                <option>Burmese</option>
+                <option>Catalan</option>
+                <option>Chamorro</option>
+                <option>Chechen</option>
+                <option>Chinese</option>
+                <option>Chuvash</option>
+                <option>Cornish</option>
+                <option>Corsican</option>
+                <option>Cree</option>
+                <option>Croatian</option>
+                <option>Czech</option>
+                <option>Danish</option>
+                <option>Dravidian</option>
+                <option>Dutch</option>
+                <option>English</option>
+                <option>Esperanto</option>
+                <option>Estonian</option>
+                <option>Ewe</option>
+                <option>Faroese</option>
+                <option>Fijian</option>
+                <option>Finnish</option>
+                <option>French</option>
+                <option>Gaelic</option>
+                <option>Galician</option>
+                <option>Georgian</option>
+                <option>German</option>
+                <option>Greek</option>
+                <option>Guarani</option>
+                <option>Gujarati</option>
+                <option>Hausa</option>
+                <option>Hebrew</option>
+                <option>Herero</option>
+                <option>Hindi</option>
+                <option>Hungarian</option>
+                <option>Icelandic</option>
+                <option>Igbo</option>
+                <option>Indonesian</option>
+                <option>Interlingua</option>
+                <option>Interlingue</option>
+                <option>Inuktitut</option>
+                <option>Inupiaq</option>
+                <option>Irish</option>
+                <option>Italian</option>
+                <option>Japanese</option>
+                <option>Javanese</option>
+                <option>Kalaallisut</option>
+                <option>Kanuri</option>
+                <option>Kartvelian</option>
+                <option>Kashmiri</option>
+                <option>Kazakh</option>
+                <option>Kinyarwanda</option>
+                <option>Komi</option>
+                <option>Kongo</option>
+                <option>Korean</option>
+                <option>Language</option>
+                <option>Lao</option>
+                <option>Latin</option>
+                <option>Latvian</option>
+                <option>Lithuanian</option>
+                <option>Macedonian</option>
+                <option>Malagasy</option>
+                <option>Malay</option>
+                <option>Maltese</option>
+                <option>Manx</option>
+                <option>Marathi</option>
+                <option>Marshallese</option>
+                <option>Mongolian</option>
+                <option>Mongolic</option>
+                <option>Navajo</option>
+                <option>Nepali</option>
+                <option>Northeast</option>
+                <option>Northern</option>
+                <option>Northwest</option>
+                <option>Norwegian</option>
+                <option>Occitan</option>
+                <option>Oromo</option>
+                <option>Ossetian</option>
+                <option>Persian</option>
+                <option>Polish</option>
+                <option>Portuguese</option>
+                <option>Punjabi</option>
+                <option>Quechuan</option>
+                <option>Romanian</option>
+                <option>Romansh</option>
+                <option>Russian</option>
+                <option>Samoan</option>
+                <option>Sango</option>
+                <option>Sanskrit</option>
+                <option>Sardinian</option>
+                <option>Serbian</option>
+                <option>Shona</option>
+                <option>Sindhi</option>
+                <option>Sinhala</option>
+                <option>Slovak</option>
+                <option>Slovenian</option>
+                <option>Somali</option>
+                <option>Southern</option>
+                <option>Spanish</option>
+                <option>Sundanese</option>
+                <option>Swahili</option>
+                <option>Swedish</option>
+                <option>Tagalog</option>
+                <option>Tahitian</option>
+                <option>Tajik</option>
+                <option>Tamil</option>
+                <option>Tatar</option>
+                <option>Telugu</option>
+                <option>Thai</option>
+                <option>Tibetan</option>
+                <option>Tigrinya</option>
+                <option>Tonga</option>
+                <option>Tsonga</option>
+                <option>Tswana</option>
+                <option>Tupian</option>
+                <option>Turkic</option>
+                <option>Turkish</option>
+                <option>Turkmen</option>
+                <option>Twi</option>
+                <option>Ukrainian</option>
+                <option>Uralic</option>
+                <option>Urdu</option>
+                <option>Uzbek</option>
+                <option>Venda</option>
+                <option>Vietnamese</option>
+                <option>Volapük</option>
+                <option>Walloon</option>
+                <option>Welsh</option>
+                <option>Western</option>
+                <option>Wolof</option>
+                <option>Xhosa</option>
+                <option>Yoruba</option>
+                <option>Zulu</option>
+            </select>
+            <label class="label-text">Skills: (Use CTRL for multiple)</label>
+            <select class="skills-selection" id="skills" multiple name="skills">
+                <option>Associate Degree in Administration of Justice</option>
+                <option>Associate Degree in Advertising</option>
+                <option>Associate Degree in Agribusiness</option>
+                <option>Associate Degree in Animal Management</option>
+                <option>Associate Degree in Architectural Building Engineering Technology</option>
+                <option>Associate Degree in Architecture and Career Options</option>
+                <option>Associate Degree in Art</option>
+                <option>Associate Degree in Automotive Maintenance Technology</option>
+                <option>Associate Degree in Aviation Mechanics</option>
+                <option>Associate Degree in Behavioral Science</option>
+                <option>Associate Degree in Boat Mechanics</option>
+                <option>Associate Degree in Boat Repair and Maintenance</option>
+                <option>Associate Degree in Cabinet Design Technology</option>
+                <option>Associate Degree in Child Development: Program Summary</option>
+                <option>Associate Degree in Christian Ministry</option>
+                <option>Associate Degree in Cosmetology Business</option>
+                <option>Associate Degree in Digital Media</option>
+                <option>Associate Degree in Early Childhood Special Education</option>
+                <option>Associate Degree in Elementary Education</option>
+                <option>Associate Degree in English</option>
+                <option>Associate Degree in Environmental Science</option>
+                <option>Associate Degree in Environmental Studies</option>
+                <option>Associate Degree in General Psychology</option>
+                <option>Associate Degree in History and Information</option>
+                <option>Associate Degree in Interdisciplinary Studies</option>
+                <option>Associate Degree in International Relations</option>
+                <option>Associate Degree in Landscape Architecture</option>
+                <option>Associate Degree in Landscaping Design</option>
+                <option>Associate Degree in Library Science</option>
+                <option>Associate Degree in Music</option>
+                <option>Associate Degree in Wildlife Management</option>
+                <option>Associate Degree in Education</option>
+                <option>Associate of Applied Science (AAS) in Accelerated Culinary Arts</option>
+                <option>Associate of Applied Science (AAS) in Accounting Specialist</option>
+                <option>Associate of Applied Science (AAS) in Administrative Support</option>
+                <option>Associate of Applied Science (AAS) in Baking and Pastry</option>
+                <option>Associate of Applied Science (AAS) in Business Administration</option>
+                <option>Associate of Applied Science (AAS) in Business Administration - Finance</option>
+                <option>Associate of Applied Science (AAS) in Business Information Systems</option>
+                <option>Associate of Applied Science (AAS) in Civil Justice - Law Enforcement</option>
+                <option>Associate of Applied Science (AAS) in Clinical Medical Assisting</option>
+                <option>Associate of Applied Science (AAS) in Computer Applications</option>
+                <option>Associate of Applied Science (AAS) in Computer Electronics</option>
+                <option>Associate of Applied Science (AAS) in Computer Game Design</option>
+                <option>Associate of Applied Science (AAS) in Computer Information Systems</option>
+                <option>Associate of Applied Science (AAS) in Culinary Arts</option>
+                <option>Associate of Applied Science (AAS) in Digital Media Communications</option>
+                <option>Associate of Applied Science (AAS) in Digital Photography</option>
+                <option>Associate of Applied Science (AAS) in Electronic Engineering</option>
+                <option>Associate of Applied Science (AAS) in Emergency Medical Services</option>
+                <option>Associate of Applied Science (AAS) in Health Care Management</option>
+                <option>Associate of Applied Science (AAS) in Health Information Management</option>
+                <option>Associate of Applied Science (AAS) in Healthcare Administration</option>
+                <option>Associate of Applied Science (AAS) in Legal Office E-ministration</option>
+                <option>Associate of Applied Science (AAS) in Telecommunications Technology</option>
+                <option>Associate of Applied Science (AAS) in Television Production</option>
+                <option>Associate of Applied Science (AAS) in Visual Communications</option>
+                <option>Associate of Arts (AA) in Computer Information Systems</option>
+                <option>Associate of Arts (AA) in Internetworking Technology</option>
+                <option>Associate of Arts (AA) in Psychology</option>
+                <option>Associate of Arts (AA) in Interior Architecture and Design</option>
+                <option>Associate of Biotechnology</option>
+                <option>Associate of Business Science (ABS) in Individualized Studies</option>
+                <option>Associate of Early Childhood Education (AECE)</option>
+                <option>Associate of Occupational Studies (AOS) in Legal Office Administration</option>
+                <option>Associate of Science (AS) in Computer Information Science</option>
+                <option>Associate of Science (AS) in Computer Science</option>
+                <option>Associate of Science (AS) in Corrections, Probation, & Parole</option>
+                <option>Associate of Science (AS) in Electronics Engineering Technology</option>
+                <option>Associate of Science (AS) in Interactive & Graphic Art</option>
+                <option>Associate of Science (AS) in Industrial Maintenance Technology</option>
+                <option>Associate of Arts and science</option>
+                <option>Bachelor of Science in Genetic Engineering and Biotechnology</option>
+                <option>Bachelor of Architecture</option>
+                <option>Bachelor of Biochemistry</option>
+                <option>Bachelor of Biomedical Science</option>
+                <option>Bachelor of Business Administration</option>
+                <option>Bachelor of Clinical Science</option>
+                <option>Bachelor of Commerce</option>
+                <option>Bachelor of Computer Applications</option>
+                <option>Bachelor of Community Health</option>
+                <option>Bachelor of Computer Information Systems</option>
+                <option>Bachelor of Science in Construction Technology</option>
+                <option>Bachelor of Criminal Justice</option>
+                <option>Bachelor of Divinity</option>
+                <option>Bachelor of Economics</option>
+                <option>Bachelor of Education</option>
+                <option>Bachelor of Engineering</option>
+                <option>Bachelor of Fine Arts</option>
+                <option>Bachelor of Letters</option>
+                <option>Bachelor of Information Systems</option>
+                <option>Bachelor of Management</option>
+                <option>Bachelor of Music</option>
+                <option>Bachelor of Pharmacy</option>
+                <option>Bachelor of Philosophy</option>
+                <option>Bachelor of Public Affairs and Policy Management</option>
+                <option>Bachelor of Social Work</option>
+                <option>Bachelor of Technology</option>
+                <option>Bachelor of Accountancy</option>
+                <option>Bachelor of Arts in American Studies</option>
+                <option>Bachelor of Arts in American Indian Studies</option>
+                <option>Bachelor of Arts in Applied Psychology</option>
+                <option>Bachelor of Arts in Biology</option>
+                <option>Bachelor of Arts in Anthropology</option>
+                <option>Bachelor of Arts in Child Advocacy</option>
+                <option>Bachelor of Arts in Clinical Psychology</option>
+                <option>Bachelor of Arts in Communication</option>
+                <option>Bachelor of Arts in Forensic Psychology</option>
+                <option>Bachelor of Arts in Organizational Psychology</option>
+                <option>Bachelor of Science in Aerospace Engineering</option>
+                <option>Bachelor of Science in Accountancy</option>
+                <option>Bachelor of Science in Actuarial</option>
+                <option>Bachelor of Science in Agriculture</option>
+                <option>Bachelor of Science in Applied Economics</option>
+                <option>Bachelor of Science in Architecture</option>
+                <option>Bachelor of Science in Architectural Engineering</option>
+                <option>Bachelor of Science in Athletic Training</option>
+                <option>Bachelor of Science in Biology</option>
+                <option>Bachelor of Science in Biomedical Engineering</option>
+                <option>Bachelor of Science in Bible</option>
+                <option>Bachelor of Science in Business Administration</option>
+                <option>Bachelor of Science in Business Administration - Computer Application</option>
+                <option>Bachelor of Science in Business Administration - Economics</option>
+                <option>Bachelor of Science in Business and Technology</option>
+                <option>Bachelor of Science in Chemical Engineering</option>
+                <option>Bachelor of Science in Chemistry</option>
+                <option>Bachelor of Science in Civil Engineering</option>
+                <option>Bachelor of Science in Clinical Laboratory Science</option>
+                <option>Bachelor of Science in Cognitive Science</option>
+                <option>Bachelor of Science in Computer Engineering</option>
+                <option>Bachelor of Science in Computer Science</option>
+                <option>Bachelor of Science in Construction Engineering</option>
+                <option>Bachelor of Science in Construction Management</option>
+                <option>Bachelor of Science in Criminal Justice</option>
+                <option>Bachelor of Science in Criminology</option>
+                <option>Bachelor of Science in Diagnostic Radiography</option>
+                <option>Bachelor of Science in Education</option>
+                <option>Bachelor of Science in Electrical Engineering</option>
+                <option>Bachelor of Science in Engineering Physics</option>
+                <option>Bachelor of Science in Engineering Science</option>
+                <option>Bachelor of Science in Engineering Technology</option>
+                <option>Bachelor of Science in English Literature</option>
+                <option>Bachelor of Science in Environmental Engineering</option>
+                <option>Bachelor of Science in Environmental Science</option>
+                <option>Bachelor of Science in Environmental Studies</option>
+                <option>Bachelor of Science in Food Science</option>
+                <option>Bachelor of Science in Foreign Service</option>
+                <option>Bachelor of Science in Forensic Science</option>
+                <option>Bachelor of Science in Forestry</option>
+                <option>Bachelor of Science in History</option>
+                <option>Bachelor of Science in Hospitality Management</option>
+                <option>Bachelor of Science in Human Resources Management</option>
+                <option>Bachelor of Science in Industrial Engineering</option>
+                <option>Bachelor of Science in Information Technology</option>
+                <option>Bachelor of Science in Information Systems</option>
+                <option>Bachelor of Science in Integrated Science</option>
+                <option>Bachelor of Science in International Relations</option>
+                <option>Bachelor of Science in Journalism</option>
+                <option>Bachelor of Science in Legal Management</option>
+                <option>Bachelor of Science in Management</option>
+                <option>Bachelor of Science in Manufacturing Engineering</option>
+                <option>Bachelor of Science in Marketing</option>
+                <option>Bachelor of Science in Mathematics</option>
+                <option>Bachelor of Science in Mechanical Engineering</option>
+                <option>Bachelor of Science in Medical Technology</option>
+                <option>Bachelor of Science in Metallurgical Engineering</option>
+                <option>Bachelor of Science in Meteorology</option>
+                <option>Bachelor of Science in Microbiology</option>
+                <option>Bachelor of Science in Mining Engineering</option>
+                <option>Bachelor of Science in Molecular Biology</option>
+                <option>Bachelor of Science in Neuroscience</option>
+                <option>Bachelor of Science in Nursing</option>
+                <option>Bachelor of Science in Nutrition science</option>
+                <option>Bachelor of Science in Software Engineering</option>
+                <option>Bachelor of Science in Petroleum Engineering</option>
+                <option>Bachelor of Science in Podiatry</option>
+                <option>Bachelor of Science in Pharmacology</option>
+                <option>Bachelor of Science in Pharmacy</option>
+                <option>Bachelor of Science in Physical Therapy</option>
+                <option>Bachelor of Science in Physics</option>
+                <option>Bachelor of Science in Plant Science</option>
+                <option>Bachelor of Science in Politics</option>
+                <option>Bachelor of Science in Psychology</option>
+                <option>Bachelor of Science in Public Safety</option>
+                <option>Bachelor of Science in Physiology</option>
+                <option>Bachelor of Science in Quantity Surveying Engineering</option>
+                <option>Bachelor of Science in Radiologic Technology</option>
+                <option>Bachelor of Science in Real-Time Interactive Simulation</option>
+                <option>Bachelor of Science in Religion</option>
+                <option>Bachelor of Science in Respiratory Therapy</option>
+                <option>Bachelor of Science in Risk Management and Insurance</option>
+                <option>Bachelor of Science in Science Education</option>
+                <option>Bachelor of Science in Sports Management</option>
+                <option>Bachelor of Science in Systems Engineering</option>
+                <option>Bachelor of Music in Jazz Studies</option>
+                <option>Bachelor of Music in Composition</option>
+                <option>Bachelor of Music in Performance</option>
+                <option>Bachelor of Music in Theory</option>
+                <option>Bachelor of Music in Music Education</option>
+                <option>Bachelor of Science in Veterinary Technology</option>
+                <option>Bachelor of Science in military and strategic studies</option>
+                <option>Master of Accountancy</option>
+                <option>Master of Accounting and Information Systems</option>
+                <option>Master of Advanced Study</option>
+                <option>Master of Applied Finance</option>
+                <option>Master of Applied Mathematical Sciences</option>
+                <option>Master of Applied Psychology</option>
+                <option>Master of Applied Science</option>
+                <option>Master of Architecture</option>
+                <option>Master of Arts</option>
+                <option>Master of Arts in Archives and Records Management</option>
+                <option>Master of Arts in Bioethics</option>
+                <option>Master of Arts in Liberal Studies</option>
+                <option>Master of Arts in Museum Studies</option>
+                <option>Master of Arts in Strategic Communication Management</option>
+                <option>Master of Arts in Teaching</option>
+                <option>Master of Athletic Training</option>
+                <option>Master of Bioethics</option>
+                <option>Master of Bioinformatics</option>
+                <option>Master of Biotechnology</option>
+                <option>Master of Business Administration</option>
+                <option>Master of Business Administration Management of Technology</option>
+                <option>Master of Business</option>
+                <option>Master of Business Economics</option>
+                <option>Master of Business Engineering</option>
+                <option>Master of Business Informatics</option>
+                <option>Master of Chemistry</option>
+                <option>Master of City Planning</option>
+                <option>Master of Commerce</option>
+                <option>Master of Community Health</option>
+                <option>Master of Computational Finance</option>
+                <option>Master of Computer Applications</option>
+                <option>Master of Computer Science</option>
+                <option>Master of Communication</option>
+                <option>Master of Counselling (or Counseling)</option>
+                <option>Master of Criminal Justice</option>
+                <option>Master in Creative Technologies</option>
+                <option>Master of Design</option>
+                <option>Master of Divinity</option>
+                <option>Master of Economics</option>
+                <option>Master of Education</option>
+                <option>Master of Educational Technology</option>
+                <option>Master of Engineering</option>
+                <option>Master of Engineering Management</option>
+                <option>Master of Enterprise</option>
+                <option>Master of European Law</option>
+                <option>Master of Finance</option>
+                <option>Master of Financial Economics</option>
+                <option>Master of Financial Engineering</option>
+                <option>Master of Financial Mathematics</option>
+                <option>Master of Fine Arts</option>
+                <option>Master of Geospatial Science & Technology</option>
+                <option>Master of Health Administration</option>
+                <option>Master of Health Science</option>
+                <option>Master of Humanities</option>
+                <option>Master of Industrial and Labor Relations</option>
+                <option>Master of International Affairs</option>
+                <option>Master of International Business</option>
+                <option>Master of International Economics</option>
+                <option>Master of International Public Policy</option>
+                <option>Master of International Studies</option>
+                <option>Master of Information</option>
+                <option>Master of Information Management</option>
+                <option>Master of Information Systems</option>
+                <option>Master of Information System Management</option>
+                <option>Master of Islamic Studies</option>
+                <option>Master of IT</option>
+                <option>Master of Jurisprudence</option>
+                <option>Master of Laws</option>
+                <option>Master of Studies in Law</option>
+                <option>Master of Landscape Architecture</option>
+                <option>Master of Letters</option>
+                <option>Master of Liberal Arts</option>
+                <option>Master of Library and Information Science</option>
+                <option>Master of Management</option>
+                <option>Master of Mass Communication and Journalism</option>
+                <option>Master of Mathematical Finance</option>
+                <option>Master of Mathematics</option>
+                <option>Master of Mathematics and Computer Science</option>
+                <option>Master of Mathematics and Philosophy</option>
+                <option>Master of Medical Science</option>
+                <option>Master of Medicine</option>
+                <option>Master of Military Art and Science</option>
+                <option>Master of Music</option>
+                <option>Master of Network and Communications Management</option>
+                <option>Master of Occupational Therapy</option>
+                <option>Master of Pharmacy</option>
+                <option>Master of Philosophy</option>
+                <option>Master of Physician Assistant Studies</option>
+                <option>Master of Physics</option>
+                <option>Master of Political Science</option>
+                <option>Master of Professional Studies</option>
+                <option>Master of Psychology</option>
+                <option>Master of Public Administration</option>
+                <option>Master of Public Affairs</option>
+                <option>Master of Public Diplomacy</option>
+                <option>Master of Public Health</option>
+                <option>Master of Public Management</option>
+                <option>Master of Public Policy</option>
+                <option>Master of Public Relations</option>
+                <option>Master of Public Service</option>
+                <option>Master of Quantitative Finance</option>
+                <option>Master of Rabbinic Studies</option>
+                <option>Master of Real Estate Development</option>
+                <option>Master of Religious Education</option>
+                <option>Master of Research</option>
+                <option>Master of Sacred Music</option>
+                <option>Master of Sacred Theology</option>
+                <option>Master of Science</option>
+                <option>Master of Science in Applied Cognition and Neuroscience</option>
+                <option>Master of Science in Athletic Training</option>
+                <option>Master of Science in Bioinformatics</option>
+                <option>Master of Science in Business Analytics</option>
+                <option>Master of Science in Clinical Epidemiology</option>
+                <option>Master of Science in Computing Research</option>
+                <option>Master of Science in Cyber Security</option>
+                <option>Master of Science in Education</option>
+                <option>Master of Science in Engineering</option>
+                <option>Master of Science in Development Administration</option>
+                <option>Master of Science in Finance</option>
+                <option>Master of Science in Governance & Organizational Sciences</option>
+                <option>Master of Science in Government Contracts</option>
+                <option>Master of Science in Health Informatics</option>
+                <option>Master of Science in Human Resource Development</option>
+                <option>Master of Science in Information Assurance</option>
+                <option>Master of Science in Information Systems</option>
+                <option>Master of Science in Information Technology</option>
+                <option>Master of Science in Leadership</option>
+                <option>Master of Science in Management</option>
+                <option>Master of Science in Nursing</option>
+                <option>Master of Science in Project Management</option>
+                <option>Master of Science in Quality Assurance</option>
+                <option>Master of Science in Risk Management</option>
+                <option>Master of Science in Supply Chain Management</option>
+                <option>Master of Science in Teaching</option>
+                <option>Master of Science in Taxation</option>
+                <option>Master of Social Science</option>
+                <option>Master of Social Work</option>
+                <option>Master of Statistics</option>
+                <option>Master of Strategic Studies</option>
+                <option>Master of Studies</option>
+                <option>Master of Surgery</option>
+                <option>Master of Theological Studies</option>
+                <option>Master of Technology</option>
+                <option>Master of Theology</option>
+                <option>Master of Urban Planning</option>
+                <option>Master of Veterinary Science</option>
+                <option>Doctor of Arts</option>
+                <option>Doctor of Audiology</option>
+                <option>Doctor of Aviation (Av.D.)</option>
+                <option>Doctor of Business Administration</option>
+                <option>Doctor of Canon Law</option>
+                <option>Doctor of Chiropractic</option>
+                <option>Doctor of Commerce</option>
+                <option>Doctor of Community Health</option>
+                <option>Doctor of Dental Surgery</option>
+                <option>Doctor of Divinity</option>
+                <option>Doctor of Education</option>
+                <option>Doctor of Engineering</option>
+                <option>Doctor of Fine Arts</option>
+                <option>Doctor of Health Administration</option>
+                <option>Doctor of Health Science</option>
+                <option>Doctor of Juridical Science; Juris Doctor</option>
+                <option>Doctor of Law; Legum Doctor</option>
+                <option>Doctor of Liberal Studies</option>
+                <option>Doctor of Management</option>
+                <option>Doctor of Medicine (M.D.)</option>
+                <option>Doctor of Ministry</option>
+                <option>Doctor of Modern Languages</option>
+                <option>Doctor of Musical Arts</option>
+                <option>Doctor of Naturopathic Medicine</option>
+                <option>Doctor of Optometry</option>
+                <option>Doctor of Osteopathic Medicine</option>
+                <option>Doctor of Pharmacy</option>
+                <option>Doctor of Philosophy</option>
+                <option>Doctor of Public Administration</option>
+                <option>Doctor of Science</option>
+                <option>Doctor of Theology</option>
+                <option>Doctor of Veterinary Medicine</option>
+                <option>Doctor of Radio oncology</option>
+            </select>
+        </div>
+        <div class="buttons-container">
+            <button class="search-button" onclick="search_professionals()">Search</button>
+        </div>
+    </div>
+    <div class="results-container">
+        <table class="results-table" id="results-table">
+            <tr>
+                <th>Add</th>
+                <th>Name</th>
+                <th>Available</th>
+                <th>Remote</th>
+                <th>Gender</th>
+                <th>Description</th>
+                <th>Total skills</th>
+            </tr>
+        </table>
+        <div class="button-container">
+            <button class="back-button" onclick="back_page(id)">Back</button>
+            <button class="next-button" onclick="next_page(id)">Next</button>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static',filename='js/dashboard/teams/add-members.js') }}"></script>
+</body>
+</html>

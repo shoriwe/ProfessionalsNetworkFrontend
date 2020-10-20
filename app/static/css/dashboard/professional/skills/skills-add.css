@@ -1,0 +1,89 @@
+.master-container {
+    box-shadow: 1px 5px 10px #888888;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input-field {
+    margin: 2vw 0vw 2vw 20vw;
+    padding: 0.8vw;
+    font-size: 2vw;
+    font-family: Arial;
+    width: 50vw;
+}
+
+.search-button {
+    margin: 2vw 0vw 2vw 0vw;
+    padding: 1vw;
+    background: #3498db;
+    color: white;
+    border-width: 0;
+    font-size: 2vw;
+}
+
+.heart-button-on {
+    background: #ffb8b8;
+    border-width: 0;
+}
+
+.heart-button-off {
+    background: #bdc3c7;
+    border-width: 0;
+}
+
+.title-container{
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    color: #2c3e50;
+    margin: 0vw 0vw 0vw 35vw;
+    font-family: Arial;
+    padding: 1vw;
+}
+
+.add-skills-button {
+    border-width: 0;
+    background: #2ecc71;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+.cancel-button {
+    border-width: 0;
+    background: #ff3f34;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+
+.normal-skill-button {
+    margin: 1vw 0vw 1vw 1vw;
+    font-size: 3vw;
+    background: #2980b9;
+    border-width: 0;
+    padding: 0.2vw 1vw 0vw 1vw;
+    color: white;
+}
+
+.add-skill-button {
+    padding: 0.2vw 1vw 0vw 1vw;
+    margin: 1vw 0vw 1vw 1vw;
+    font-size: 3vw;
+    background: #2ecc71;
+    border-width: 0;
+    color: white;
+}
+

@@ -1,0 +1,81 @@
+.title {
+    background: #82589F;
+    font-family: Franklin Gothic Medium;
+    text-align: center;
+    box-shadow: 1px 5px 10px #888888;
+    padding: 1vw;
+    color: white;
+}
+
+.phone-number-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.country-code {
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0.5vw;
+    width: 11vw;
+}
+
+.update-fail-message {
+    background: #e74c3c;
+    color: white;
+    font-size: 3vw;
+    font-family: Arial;
+    display: None;
+}
+
+.master-container {
+    padding: 1vw;
+    text-align: center;
+    box-shadow: 1px 5px 10px #888888;
+}
+
+.email-phone-number-container {
+    background: #3498db;
+    padding: 1vw;
+    width: 40vw;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 1px 5px 10px #888888;
+}
+
+.email-input-field {
+    box-shadow: 1px 1px 10px #888888;
+    font-size: 2vw;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+    padding: 0.5vw;
+    margin: 2vw 0vw 2vw 0vw;
+}
+
+.phone-number-field {
+    box-shadow: 1px 1px 10px #888888;
+    font-size: 2vw;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+    padding: 0.5vw;
+    // margin: 2vw 0vw 1vw 0vw;
+}
+
+.request-password-change-button {
+    background: #2ecc71;
+    color: white;
+    margin: 1vw 0vw 2vw 0vw;
+    font-size: 2vw;
+    padding: 0.5vw;
+    width: 10vw;
+    border-width: 0;
+}
+
+.cancel-button {
+    background: #e74c3c;
+    color: white;
+    font-size: 2vw;
+    margin: 2vw 0vw 2vw 0vw;
+    padding: 0.5vw;
+    border-width: 0;
+    width: 10vw;
+}

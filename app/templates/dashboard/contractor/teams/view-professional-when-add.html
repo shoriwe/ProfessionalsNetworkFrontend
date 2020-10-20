@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{{ url_for('static',filename='css/dashboard/teams/view-team-members.css') }}"
+          rel="stylesheet"
+          type="text/css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="master-container">
+    <div class="title-container">
+        <h1 class="title" id="team-member-name">{{ professional }}</h1>
+        <a class="cancel-button" href="javascript:void(0)" onclick="go_back_add()">Back</a>
+        <button class="add-professional" onclick="invite_professional(id)">Invite</button>
+    </div>
+</div>
+<div class="box-container">
+    <div class="profile-working-fields">
+        <h1 class="update-message" id="update-message"></h1>
+        <label class="label-text">Liked skills only:</label><input {{'checked="checked"' if liked_only else ""}}
+        onclick="return false" class="liked-skills-checkbox" id="liked-skills-only"
+        type="checkbox"><br>
+        <label class="label-text">Available:</label><input {{'checked="checked"' if available else ""}} onclick="return
+        false" class="available-checkbox" id="available"
+        type="checkbox"><br>
+        <label class="label-text">Remote:</label><input {{'checked="checked"' if remote else ""}} onclick="return false"
+        class="remote-checkbox" id="remote" type="checkbox"><br>
+        <label class="label-text" for="location">Location:</label>
+        <input class="location-selection-field" id="location" readonly type="text" value="{{ location }}">
+        <br>
+        <label class="label-text" for="nationality">Nationality:</label>
+        <input class="nationality-selection-field" id="nationality" readonly type="text" value="{{ nationality }}">
+        <br>
+        <label class="label-text" for="gender">Gender:</label>
+        <input class="gender-selection-field" id="gender" readonly type="text" value="{{ gender }}">
+        <br>
+        <label class="label-text" for="description">Description:</label>
+        <br>
+        <textarea class="description-field" id="description" maxlength="350" readonly>{{ description }}</textarea>
+    </div>
+    <div class="network-container">
+        <svg class="profile-network" id="id-network-profile-graph"></svg>
+    </div>
+</div>
+<script src="{{ url_for('static',filename='js/dashboard/teams/contractor-teams-view-professional.js') }}"></script>
+</body>
+</html>

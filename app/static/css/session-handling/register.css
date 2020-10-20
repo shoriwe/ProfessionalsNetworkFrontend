@@ -1,0 +1,144 @@
+.master-align{
+    display: flex;
+}
+
+.title-alignment{
+    width: 60vw;
+    text-align: center;
+    padding-top: 10vw;
+    padding-left: 10vw;
+}
+
+.title-text{
+    padding: 0vw 5vw 0vw 0vw;
+    font-family: Franklin Gothic Medium;
+    text-align: left;
+    font-size: 5vw;
+    color: #3742fa;
+    text-decoration: none;
+}
+
+.quote-text {
+    font-size: 1.8vw;
+    text-align: left;
+}
+
+.register-form-alignment {
+    align: center;
+    padding: 1vw 15vw;
+}
+
+.register-failed-message {
+    display: none;
+    text-align: center;
+    color: white;
+    font-size: 2.0vw;
+    font-family: Arial Black;
+    padding: 1vw 1vw 1vw 1vw;
+    background: red;
+}
+
+.register-form-container {
+    box-shadow: 0.1vw 0.1vw 1vw 1vw #ecf0f1;
+    border-radius: 1vw;
+}
+
+.register-form-title-text {
+    text-align: center;
+    font-size: 6vw;
+    color: #2f3640;
+}
+
+.line-separator{
+    width: 25vw;
+    background: #34495e;
+    border: 1px solid #34495e;
+}
+
+.name-container{
+    padding: 3vw 1vw 0vw 1vw;
+    text-align: center;
+}
+
+.basic-container{
+    padding: 1vw 1vw 0vw 1vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-type-container{
+    padding: 1vw 1vw 1vw 1vw;
+    text-align: center;
+
+}
+
+.account-container{
+    display: inline-block;
+    font-size: 2.5vw;
+    padding: 0vw 1vw 0vw 1vw;
+}
+
+.radio-field{
+    width: 2vw;
+    height: 2vw;
+}
+
+.input-field{
+    width: 34.5vw;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #ecf0f1;
+    box-shadow: 0.1vw 0.1vw 1vw 0.1vw #ecf0f1;
+    text-align: left;
+    font-size: 2.8vw;
+}
+
+
+.register-button-alignment{
+    text-align: center;
+}
+
+
+.register-button {
+    width: 34.5vw;
+    border-radius: 1vw;
+    border-width: 0vw;
+    font-size: 2.8vw;
+    color: #ffffff;
+    background: #27ae60 ;
+}
+
+
+.reset-password-container{
+    padding: 1vw 0vw;
+    text-align: center;
+}
+
+
+.reset-password-text {
+    font-size: 2.0vw;
+    font-color: #70a1ff;
+}
+
+.login-button{
+    width: 34.5vw;
+    border-radius: 1vw;
+    border-width: 0vw;
+    font-size: 2.8vw;
+    color: #ffffff;
+    background: #3c40c6;
+}
+
+.register-button-alignment{
+    text-align: center;
+    padding: 1vw 2vw;
+}
+
+.country-code {
+    font-family: Arial;
+    font-size: 1vw;
+    width: 6vw;
+    height: 3.4vw;
+}

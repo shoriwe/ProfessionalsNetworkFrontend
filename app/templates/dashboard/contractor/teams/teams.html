@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static',filename='css/dashboard/teams/teams.css') }}"
+          rel="stylesheet"
+          type="text/css">
+</head>
+<body>
+<div class="master-container">
+    <div class="title-container">
+        <h1 class="title">My Teams</h1>
+        <br>
+        <div class="options-container">
+            <form onsubmit="return handle_create_team(event)">
+                <input class="search-field" id="team-search-bar" placeholder="New team name" required type="text">
+                <button class="search-teams-buttons" type="submit">Add</button>
+            </form>
+            <button class="delete-teams-button" onclick="dissolve_teams()">Dissolve</button>
+        </div>
+    </div>
+</div>
+<div class="teams-container" id="teams-container">
+
+</div>
+<script src="{{ url_for('static',filename='js/dashboard/teams/teams-loader.js') }}"></script>
+<script>load_contractor_teams()</script>
+</body>
+</html>

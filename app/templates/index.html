@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>ProNet - Home</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="{{ url_for('static', filename='css/index.css')  }}" rel="stylesheet">
+</head>
+<body>
+<div class="navigation-bar">
+    <div class="logo-field">
+        <h2 class="logo-content">ProNet</h2>
+    </div>
+    <div class="navigation-bar-buttons">
+        <a class="navigation-bar-login-button" href="/login">Login</a>
+        <a class="navigation-bar-register-button" href="/register">Get Started</a>
+    </div>
+</div>
+<div class="page-description-container">
+    <div class="welcome-container">
+        <div class="welcome">
+            <h1 class="welcome-title">Start with the greatest team ever</h1>
+            <h3 class="welcome-message">Find the professionals that your team needs or join to the best one</h3>
+            <a class="welcome-register-button" href="/register">Create New Account</a>
+        </div>
+        <div class="welcome-image-container">
+            <img src="{{ url_for('static', filename='images/logo.png')  }}" style='max-width: 100%; max-height: 100%;'>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

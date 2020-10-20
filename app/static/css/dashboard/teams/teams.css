@@ -1,0 +1,91 @@
+.title {
+    background: #82589F;
+    font-family: Franklin Gothic Medium;
+    text-align: center;
+    box-shadow: 1px 5px 10px #888888;
+    padding: 1vw;
+    color: white;
+}
+
+.teams-container {
+    display: grid;
+    align-content: space-evenly;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.view-team {
+    font-size: 2vw;
+    padding: 3.3vw 1vw;
+    border-width: 0;
+    color: white;
+    background: #32ff7e;
+    text-decoration: none;
+}
+
+
+.button-container {
+    // justify-content: flex-start | flex-end | center | space-between | space-around;
+    display: flex;
+    align-items:center;
+    margin: 1vw;
+}
+.deletion-team-box {
+    background: #ff5e57;
+    color: white;
+    border-width: 0;
+    font-family: Arial;
+    padding: 3vw;
+    font-size: 2.5vw;
+}
+
+.team-box{
+    background: #3498db;
+    color: white;
+    border-width: 0;
+    font-family: Arial;
+    padding: 3vw;
+    font-size: 2.5vw;
+}
+
+.master-container {
+    box-shadow: 1px 5px 10px #888888;
+    text-align: center;
+}
+
+.search-field {
+    margin: 0vw 0vw 2vw 20vw;
+    padding: 0.8vw;
+    font-size: 2vw;
+    font-family: Arial;
+    width: 50vw;
+}
+
+.search-teams-buttons {
+    border-width: 0;
+    background: #2ecc71;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+.delete-teams-button {
+    border-width: 0;
+    background: #ff3f34;
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    margin: 0.6vw 0vw 0vw 1vw;
+    height: 3vw;
+}
+
+.options-container {
+    display: flex;
+    text-align: center;
+    padding: 0vw 0vw 0vw 0vw;
+}
